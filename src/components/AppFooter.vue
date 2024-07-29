@@ -103,7 +103,10 @@ export default {
             margin-top: 10px;
             li {
                 font-size: 12px;
-                color: grey;
+                a {
+                    text-decoration: none;
+                    color: grey;
+                }
             }
         }
 

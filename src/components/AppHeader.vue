@@ -1,6 +1,61 @@
 <script>
 export default {
-
+    data() {
+        return {
+            menu: [
+                {
+                    label: 'CHARACTERS',
+                    url: '#',
+                    active: false,
+                },
+                {
+                    label: 'COMICS',
+                    url: '#',
+                    active: true,
+                },
+                {
+                    label: 'MOVIES',
+                    url: '#',
+                    active: false,
+                },
+                {
+                    label: 'TV',
+                    url: '#',
+                    active: false,
+                },
+                {
+                    label: 'GAMES',
+                    url: '#',
+                    active: false,
+                },
+                {
+                    label: 'COLLECTIBLES',
+                    url: '#',
+                    active: false,
+                },
+                {
+                    label: 'VIDEOS',
+                    url: '#',
+                    active: false,
+                },
+                {
+                    label: 'FANS',
+                    url: '#',
+                    active: false,
+                },
+                {
+                    label: 'NEWS',
+                    url: '#',
+                    active: false,
+                },
+                {
+                    label: 'SHOP',
+                    url: '#',
+                    active: false,
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -12,35 +67,8 @@ export default {
                 <img src="../assets/img/dc-logo.png" alt="dc-logo">
 
                 <ul class="list-unstyled d-flex">
-                    <li> 
-                        <a href="#">CHARACTERS</a>
-                    </li>
-                    <li> 
-                        <a href="#" class="active">COMICS</a>
-                    </li>
-                    <li> 
-                        <a href="#">MOVIES</a>
-                    </li>
-                    <li> 
-                        <a href="#">TV</a>
-                    </li>
-                    <li> 
-                        <a href="#">GAMES</a>
-                    </li>
-                    <li> 
-                        <a href="#">COLLECTIBLES</a>
-                    </li>
-                    <li> 
-                        <a href="#">VIDEOS</a>
-                    </li>
-                    <li> 
-                        <a href="#">FANS</a>
-                    </li>
-                    <li> 
-                        <a href="#">NEWS</a>
-                    </li>
-                    <li> 
-                        <a href="#">SHOP</a>
+                    <li v-for="section, index in menu" :key="index"> 
+                        <a href="section.url" :class="section.active ? 'active' : ' ' ">{{ section.label }}</a>
                     </li>
                 </ul>
             </div>
