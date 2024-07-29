@@ -68,7 +68,7 @@ export default {
 
                 <ul class="list-unstyled d-flex">
                     <li v-for="section, index in menu" :key="index"> 
-                        <a href="section.url" :class="section.active ? 'active' : ' ' ">{{ section.label }}</a>
+                        <a :href="section.url" :class="section.active ? 'active' : ' ' ">{{ section.label }}</a>
                     </li>
                 </ul>
             </div>
@@ -91,6 +91,10 @@ ul {
         a {
             color: black;
             text-decoration: none;
+            transition: color 0.3s ease;
+            &:hover {
+                color: rgb(0, 110, 255);
+            }
         }
         .active {
             color: rgb(0, 110, 255);

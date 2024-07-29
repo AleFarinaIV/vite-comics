@@ -1,6 +1,35 @@
 <script>
 export default {
-    
+    data() {
+        return {
+            social_media: [
+                { 
+                    icon_url: './src/assets/img/footer-facebook.png', 
+                    url: '#'
+
+                },
+                { 
+                    icon_url: './src/assets/img/footer-twitter.png',  
+                    url: '#'
+
+                },
+                { 
+                    icon_url: './src/assets/img/footer-youtube.png',  
+                    url: '#'
+
+                },
+                { 
+                    icon_url: './src/assets/img/footer-pinterest.png', 
+                    url: '#'
+
+                },
+                {
+                    icon_url: './src/assets/img/footer-periscope.png',
+                    url: '#'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -68,11 +97,9 @@ export default {
                         <div id="footer-right" class="d-flex align-items-center justify-content-between">
                             <h4><a href="#">FOLLOW US</a></h4>
                             <div id="icon-container">
-                                <img src="../assets/img/footer-facebook.png" alt="">
-                                <img src="../assets/img/footer-twitter.png" alt="">
-                                <img src="../assets/img/footer-youtube.png" alt="">
-                                <img src="../assets/img/footer-pinterest.png" alt="">
-                                <img src="../assets/img/footer-periscope.png" alt="">
+                                <a :href="social_icon.url" v-for="social_icon, index in social_media" :key="index">
+                                    <img :src="social_icon.icon_url" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
