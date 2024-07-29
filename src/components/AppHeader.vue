@@ -67,7 +67,7 @@ ul {
         .active {
             color: rgb(0, 110, 255);
             border-bottom: 4px solid blue;
-            padding-bottom: 30px;
+            padding-bottom: 40px;
         }
     }
 
