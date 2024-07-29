@@ -5,7 +5,9 @@ export default {
 </script>
 
 <template>
-<h1>Questo è il Main!</h1>
+    <div class="bg-dark text-white p-5">
+        <h2> --> Content goes here <-- </h2>
+    </div>
 </template>
 
 <style scoped>
