@@ -13,44 +13,44 @@ export default {
                         <div class="col-4 p-0">
                             <h6>DC COMICS</h6>
                             <ul class="list-unstyled">
-                                <li>Characters</li>
-                                <li>Comics</li>
-                                <li>Movies</li>
-                                <li>TV</li>
-                                <li>Games</li>
-                                <li>Videos</li>
-                                <li>News</li>
+                                <li><a href="">Characters </a> </li>
+                                <li><a href="">Comics </a> </li>
+                                <li><a href="">Movies </a> </li>
+                                <li><a href="">TV </a> </li>
+                                <li><a href="">Games </a> </li>
+                                <li><a href="">Videos </a> </li>
+                                <li><a href="">News </a> </li>
                             </ul>
                             <h6>SHOP</h6>
                             <ul class="list-unstyled">
-                                <li>Shop DC</li>
-                                <li>Shop DC Collectibles</li>
+                                <li><a href="">Shop DC</a></
+                                <li><a href="">Shop DC Collectibles</a></li>
                             </ul>
                         </div>
                         <div class="col-4 p-0">
                             <h6>DC</h6>
                             <ul class="list-unstyled">
-                                <li>Thermes Of Use</li>
-                                <li>Privacy policy (New)</li>
-                                <li>Ad Choices</li>
-                                <li>Advertising</li>
-                                <li>Jobs</li>
-                                <li>Subscriptions</li>
-                                <li>Talent Workshops</li>
-                                <li>CPSC Certificates</li>
-                                <li>Ratings</li>
-                                <li>Shop Help</li>
-                                <li>Contact Us</li>
+                                <li><a href="">Thermes Of Use</a></li>
+                                <li><a href="">Privacy policy (New)</a></li>
+                                <li><a href="">Ad Choices</a></li>
+                                <li><a href="">Advertising </a> </li>
+                                <li><a href="">Jobs </a> </li>
+                                <li><a href="">Subscriptions </a></li>
+                                <li><a href="">Talent Workshops</a></li>
+                                <li><a href="">CPSC Certificates</a></li>
+                                <li><a href="">Ratings </a></li>
+                                <li><a href="">Shop Help</a></li>
+                                <li><a href="">Contact Us</a></li>
                             </ul>
                         </div>
                         <div class="col-4 p-0">
                             <h6>SITES</h6>
                             <ul class="list-unstyled">
-                                <li>DC</li>
-                                <li>MAD MAgazine</li>
-                                <li>MDC Kids</li>
-                                <li>DC Universe</li>
-                                <li>DC Power Visa</li>
+                                <li><a href="">DC </a></li>
+                                <li><a href="">MAD Magazine</a></li>
+                                <li><a href="">MDC Kids</a></li>
+                                <li><a href="">DC Universe</a></li>
+                                <li><a href="">DC Power Visa</a></li>
                             </ul>
                         </div>
                     </div>
@@ -95,6 +95,18 @@ export default {
             cursor: pointer;
         }
 
+        .bg_grey {
+            background-color: #303030;
+        }
+
+        ul {
+            margin-top: 10px;
+            li {
+                font-size: 12px;
+                color: grey;
+            }
+        }
+
         #footer-right {
             a {
                 text-decoration: none;
@@ -112,18 +124,6 @@ export default {
             width: 450px;
             top: 150px;
             right: 260px;
-        }
-    }
-
-    .bg_grey {
-        background-color: #303030;
-    }
-
-    ul {
-        margin-top: 10px;
-        li {
-            font-size: 12px;
-            color: grey;
         }
     }
 </style>
