@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <div class="bg_footer text-white p-4">
+    <div class="bg_footer text-white">
         <div class="container p-4">
             <div class="row">
                 <div class="col-4">
@@ -57,6 +57,25 @@ export default {
                 </div>
             </div>
         </div>
+        <div class="bg_grey py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+                        <button>SIGN-UP NOW!</button>
+                        <div id="footer-right" class="d-flex align-items-center justify-content-between">
+                            <h4><a href="#">FOLLOW US</a></h4>
+                            <div id="icon-container">
+                                <img src="../assets/img/footer-facebook.png" alt="">
+                                <img src="../assets/img/footer-twitter.png" alt="">
+                                <img src="../assets/img/footer-youtube.png" alt="">
+                                <img src="../assets/img/footer-pinterest.png" alt="">
+                                <img src="../assets/img/footer-periscope.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -64,6 +83,27 @@ export default {
     .bg_footer {
         background-image: url(../assets/img/footer-bg.jpg);
         background-size: cover;
+
+        button {
+            background-color: #303030;
+            color: white;
+            border: 3px solid #0C7CEC;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #footer-right {
+            a {
+                text-decoration: none;
+                font-size: 18px;
+            }
+            #icon-container {
+                img {
+                    margin-left: 15px;
+                    width: 30px;
+                }
+            }
+        }
     }
 
     .bg_grey {
