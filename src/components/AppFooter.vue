@@ -55,9 +55,12 @@ export default {
                         </div>
                     </div>
                 </div>
+                <div class="col-8">
+                    <img id="logo_jumbo_dc" class="position-absolute" src="../assets/img/dc-logo-bg.png" alt="">
+                </div>
             </div>
         </div>
-        <div class="bg_grey py-4">
+        <div class="bg_grey py-4 position-relative z-1">
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex align-items-center justify-content-between">
@@ -103,6 +106,12 @@ export default {
                     width: 30px;
                 }
             }
+        }
+
+        #logo_jumbo_dc {
+            width: 450px;
+            top: 150px;
+            right: 260px;
         }
     }
 

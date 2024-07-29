@@ -9,3 +9,8 @@
 header {
     height: 95px;
 }
+
+main {
+    position: relative;
+    z-index: 1;
+}
