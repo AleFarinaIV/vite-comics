@@ -2,6 +2,118 @@
 export default {
     data() {
         return {
+            dc_comics: [
+                {
+                    label: 'Characters',
+                    url: '#',
+                },
+                {
+                    label: 'Comics',
+                    url: '#',
+                },
+                {
+                    label: 'Movies',
+                    url: '#',
+                },
+                {
+                    label: 'TV',
+                    url: '#',
+                },
+                {
+                    label: 'Games',
+                    url: '#',
+                },
+                {
+                    label: 'Videos',
+                    url: '#',
+                },
+                {
+                    label: 'News',
+                    url: '#',
+                },
+            ],
+
+            shop_section: [
+                {
+                    label: 'Shop DC',
+                    url: '#'
+                },
+                {
+                    label: 'Collectibles',
+                    url: '#'
+                },
+            ],
+
+            dc_section: [
+                {
+                    label: 'Thermes Of Use',
+                    url: '#'
+                },
+                {
+                    label: 'Privacy policy (New)',
+                    url: '#'
+                },
+                {
+                    label: 'Ad Choices',
+                    url: '#'
+                },
+                {
+                    label: 'Advertising',
+                    url: '#'
+                },
+                {
+                    label: 'Jobs',
+                    url: '#'
+                },
+                {
+                    label: 'Subscriptions',
+                    url: '#'
+                },
+                {
+                    label: 'Talent Workshops',
+                    url: '#'
+                },
+                {
+                    label: 'CPSC Certificates',
+                    url: '#'
+                },
+                {
+                    label: 'Ratings',
+                    url: '#'
+                },
+                {
+                    label: 'Shop Help',
+                    url: '#'
+                },
+                {
+                    label: 'Contact Us',
+                    url: '#'
+                },
+            ],
+
+            sites_section: [
+                {
+                    label: 'DC',
+                    url: '#'
+                },
+                {
+                    label: 'MAD Magazine',
+                    url: '#'
+                },
+                {
+                    label: 'MDC Kids',
+                    url: '#'
+                },
+                {
+                    label: 'DC Universe',
+                    url: '#'
+                },
+                {
+                    label: 'CDC Power Visa',
+                    url: '#'
+                },
+            ],
+
             social_media: [
                 { 
                     icon_url: './src/assets/img/footer-facebook.png', 
@@ -42,44 +154,31 @@ export default {
                         <div class="col-4 p-0">
                             <h6>DC COMICS</h6>
                             <ul class="list-unstyled">
-                                <li><a href="">Characters </a> </li>
-                                <li><a href="">Comics </a> </li>
-                                <li><a href="">Movies </a> </li>
-                                <li><a href="">TV </a> </li>
-                                <li><a href="">Games </a> </li>
-                                <li><a href="">Videos </a> </li>
-                                <li><a href="">News </a> </li>
+                                <li v-for="link, index in dc_comics">
+                                    <a :href="link.url">{{ link.label }}</a>
+                                </li>
                             </ul>
                             <h6>SHOP</h6>
                             <ul class="list-unstyled">
-                                <li><a href="">Shop DC</a></
-                                <li><a href="">Shop DC Collectibles</a></li>
+                                <li v-for="link, index in shop_section">
+                                    <a :href="link.url">{{ link.label }}</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-4 p-0">
                             <h6>DC</h6>
                             <ul class="list-unstyled">
-                                <li><a href="">Thermes Of Use</a></li>
-                                <li><a href="">Privacy policy (New)</a></li>
-                                <li><a href="">Ad Choices</a></li>
-                                <li><a href="">Advertising </a> </li>
-                                <li><a href="">Jobs </a> </li>
-                                <li><a href="">Subscriptions </a></li>
-                                <li><a href="">Talent Workshops</a></li>
-                                <li><a href="">CPSC Certificates</a></li>
-                                <li><a href="">Ratings </a></li>
-                                <li><a href="">Shop Help</a></li>
-                                <li><a href="">Contact Us</a></li>
+                                <li v-for="link, index in dc_section">
+                                    <a :href="link.url">{{ link.label }}</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-4 p-0">
                             <h6>SITES</h6>
                             <ul class="list-unstyled">
-                                <li><a href="">DC </a></li>
-                                <li><a href="">MAD Magazine</a></li>
-                                <li><a href="">MDC Kids</a></li>
-                                <li><a href="">DC Universe</a></li>
-                                <li><a href="">DC Power Visa</a></li>
+                                <li v-for="link, index in sites_section">
+                                    <a :href="link.url">{{ link.label }}</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -93,7 +192,7 @@ export default {
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex align-items-center justify-content-between">
-                        <button>SIGN-UP NOW!</button>
+                        <button><a href="#">SIGN-UP NOW!</a></button>
                         <div id="footer-right" class="d-flex align-items-center justify-content-between">
                             <h4><a href="#">FOLLOW US</a></h4>
                             <div id="icon-container">
@@ -120,6 +219,14 @@ export default {
             border: 3px solid #0C7CEC;
             padding: 10px 20px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color: #0C7CEC;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
 
         .bg_grey {
@@ -146,6 +253,10 @@ export default {
                 img {
                     margin-left: 15px;
                     width: 30px;
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: transform 0.3s ease;
+                    }
                 }
             }
         }
