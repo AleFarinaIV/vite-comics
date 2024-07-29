@@ -11,3 +11,9 @@ Se volete potete utilizzare bootstrap installandolo con npm. Per le icone di fon
 # Bonus
 
 Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
+
+# Descrizione del problema
+
+Creare i vari components che andranno a formare la nostra pagina: un Header, un Main e un Footer
+
+Importare i vari components all'interno dell'App di Vue
