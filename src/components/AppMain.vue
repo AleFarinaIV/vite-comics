@@ -6,7 +6,13 @@ export default {
 
 <template>
     <div class="bg-dark text-white p-5">
-        <h2> --> Content goes here <-- </h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2> --> Content goes here <-- </h2>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
