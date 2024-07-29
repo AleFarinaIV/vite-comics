@@ -263,8 +263,8 @@ export default {
 
         #logo_jumbo_dc {
             width: 450px;
-            top: 150px;
-            right: 260px;
+            top: 300px;
+            right: 250px;
         }
     }
 </style>
