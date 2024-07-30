@@ -45,7 +45,7 @@ export default {
         </div>
         <div id="main_navbar" class="container-full bg-primary">
             <div class="row justify-content-center align-items-center pt-5">
-                <div class="col-2" v-for="section, index in main_navbar" :key="index">
+                <div id="main_navbar_section" class="col-2" v-for="section, index in main_navbar" :key="index">
                     <a :href="section.url">
                         <div id="logo_img_container" class="d-flex justify-content-center align-items-center">
                             <img :src="section.logo" alt="">
@@ -77,6 +77,13 @@ export default {
         a {
             color: white;
             text-decoration: none;
+        }
+
+        #main_navbar_section {
+            transition: transform 0.3s ease;
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 

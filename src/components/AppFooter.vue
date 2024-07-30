@@ -240,6 +240,9 @@ export default {
                 a {
                     text-decoration: none;
                     color: grey;
+                    &:hover {
+                        color: #0C7CEC;
+                    }
                 }
             }
         }

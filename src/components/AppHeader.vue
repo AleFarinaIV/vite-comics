@@ -1,59 +1,16 @@
 <script>
+import MenuItem from "../components/MenuItem.vue";
+import { menu } from "../data/headerMenuData"
+
 export default {
+
+    components: {
+        MenuItem,
+    },
+
     data() {
         return {
-            menu: [
-                {
-                    label: 'CHARACTERS',
-                    url: '#',
-                    active: false,
-                },
-                {
-                    label: 'COMICS',
-                    url: '#',
-                    active: true,
-                },
-                {
-                    label: 'MOVIES',
-                    url: '#',
-                    active: false,
-                },
-                {
-                    label: 'TV',
-                    url: '#',
-                    active: false,
-                },
-                {
-                    label: 'GAMES',
-                    url: '#',
-                    active: false,
-                },
-                {
-                    label: 'COLLECTIBLES',
-                    url: '#',
-                    active: false,
-                },
-                {
-                    label: 'VIDEOS',
-                    url: '#',
-                    active: false,
-                },
-                {
-                    label: 'FANS',
-                    url: '#',
-                    active: false,
-                },
-                {
-                    label: 'NEWS',
-                    url: '#',
-                    active: false,
-                },
-                {
-                    label: 'SHOP',
-                    url: '#',
-                    active: false,
-                }
-            ]
+            menu
         }
     }
 }
@@ -67,9 +24,15 @@ export default {
                 <img src="../assets/img/dc-logo.png" alt="dc-logo">
 
                 <ul class="list-unstyled d-flex">
-                    <li v-for="section, index in menu" :key="index"> 
-                        <a :href="section.url" :class="section.active ? 'active' : ' ' ">{{ section.label }}</a>
-                    </li>
+
+                    <MenuItem 
+                    v-for="section, index in menu" 
+                    :key="index" 
+                    :label="section.label"
+                    :url="section.url"
+                    :active="section.active"
+                    />
+
                 </ul>
             </div>
         </div>
