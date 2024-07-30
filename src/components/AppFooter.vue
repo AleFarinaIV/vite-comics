@@ -146,7 +146,7 @@ export default {
 </script>
 
 <template>
-    <div class="bg_footer text-white">
+    <div class="bg_footer text-white position-relative">
         <div class="container p-4">
             <div class="row">
                 <div class="col-4">
@@ -265,9 +265,9 @@ export default {
         }
 
         #logo_jumbo_dc {
-            width: 450px;
-            top: 300px;
+            width: 460px;
             right: 250px;
+            top: -80px;
         }
     }
 </style>
