@@ -7,7 +7,7 @@ const menu = [
     {
         label: 'COMICS',
         url: '#',
-        active: true,
+        active: false,
     },
     {
         label: 'MOVIES',

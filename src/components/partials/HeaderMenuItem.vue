@@ -1,17 +1,36 @@
 <script>
+  import { itemClicked } from "../../data/functions"
+  import { menu } from "../../data/headerMenuData"
+
   export default {
+    methods: {
+      itemClicked() {
+        this.onClick()
+      }
+    },
+
+    data() {
+      return {
+        menu
+      }
+    },
+    
     props: {
       label: {
         type: String,
-        required: Boolean
+        required: true
       },
       url: {
         type: String,
-        required: Boolean
+        required: true
       },
       active: {
         type: Boolean,
-        required: Boolean
+        required: true
+      },
+      onClick: {
+        type: Function,
+        required: true
       }
     }
   }
@@ -20,7 +39,7 @@
 <template>
 
   <li>
-    <a :href="url" :class="active ? 'active' : ''">{{ label }}</a>
+    <a @click="itemClicked" :href="url" :class="{ 'active' : active }">{{ label }}</a>
   </li>
 
 </template>
@@ -31,7 +50,7 @@
     margin: 0 15px;
     font-size: 12px;
     font-weight: bold;
-  
+
     a {
       color: black;
       text-decoration: none;
@@ -40,7 +59,7 @@
         color: rgb(0, 110, 255);
       }
     }
-  
+
     .active {
       color: rgb(0, 110, 255);
       border-bottom: 4px solid blue;

@@ -22,7 +22,7 @@
     <a :href="url">
       <div id="logo_img_container" class="d-flex justify-content-center align-items-center">
         <img :src="logo" :alt="text">
-        <p>{{ text }}</p>
+        <p class="m-0">{{ text }}</p>
       </div>
     </a>
     

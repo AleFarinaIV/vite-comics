@@ -39,6 +39,13 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top;
+
+            transition: transform 0.3s;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+            }
         }
 
     }

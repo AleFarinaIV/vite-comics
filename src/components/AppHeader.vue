@@ -1,7 +1,6 @@
 <script>
 import { menu } from "../data/headerMenuData"
 import HeaderMenuItem from "./partials/HeaderMenuItem.vue";
-
 export default {
 
     components: {
@@ -11,6 +10,13 @@ export default {
     data() {
         return {
             menu
+        }
+    },
+    methods: {
+        itemClicked(index) {
+            this.menu.forEach((item, i) => {
+                item.active = (i === index)
+            });
         }
     }
 }
@@ -31,6 +37,7 @@ export default {
                     :label="section.label"
                     :url="section.url"
                     :active="section.active"
+                    :onClick="() => itemClicked(index)"
                     />
 
                 </ul>
