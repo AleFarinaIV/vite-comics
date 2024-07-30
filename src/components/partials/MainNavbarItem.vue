@@ -19,14 +19,14 @@
 
 <template>
 
-        <a :href="url">
-          <div id="logo_img_container" class="d-flex justify-content-center align-items-center">
-            <img :src="logo" :alt="text">
-            <p>{{ text }}</p>
-          </div>
-        </a>
+    <a :href="url">
+      <div id="logo_img_container" class="d-flex justify-content-center align-items-center">
+        <img :src="logo" :alt="text">
+        <p>{{ text }}</p>
+      </div>
+    </a>
     
-    </template>
+</template>
 
 <style scoped>
 
